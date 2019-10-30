@@ -4,27 +4,23 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@android:color/background_light"
+    android:padding="20dp"
+    tools:context=".MainActivity"
     >
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainActivity"
         android:orientation="vertical"
-        android:padding="12dp"
         >
 
     <!--    begin question-->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:layout_marginBottom="20dp"
+            style="@style/question_block"
             >
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="What does OOP stand for?"
-                android:textSize="16sp"
+                style="@style/question"
                 />
             <RadioGroup
                 android:id="@+id/q1"
@@ -35,35 +31,20 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Object Oriented Programming"
+                    android:id="@+id/q1_1"
                     />
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Only One Program"
+                    android:id="@+id/q1_2"
                     />
-
-                <RadioGroup
-                    android:id="@+id/q2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="Yes" />
-
-                    <RadioButton
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="No" />
-
-                </RadioGroup>
 
                 <RadioButton
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Object Obvious Programming"
+                    android:id="@+id/q1_3"
                     />
             </RadioGroup>
 
@@ -71,28 +52,44 @@
     <!--    end question-->
         <!--    begin question-->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+            style="@style/question_block"
             >
             <TextView
+                android:text="Does PHP support multiple inheritance?"
+                style="@style/question"
+                />
+
+            <RadioGroup
+                android:id="@+id/q2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Does PHP support multiple inheritance?"
-                />
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Yes"
+                    android:id="@+id/q2_1"
+                    />
+
+                <RadioButton
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No"
+                    android:id="@+id/q2_2"
+                    />
+
+            </RadioGroup>
 
         </LinearLayout>
         <!--    end question-->
         <!--    begin question-->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+            style="@style/question_block"
             >
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="Select all the valid statements for displaying Hello World in an HTML file using PHP:"
+                style="@style/question"
                 />
             <CheckBox
                 android:id="@+id/q3_1"
@@ -118,14 +115,11 @@
         <!--    end question-->
         <!--    begin question-->
         <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
+            style="@style/question_block"
             >
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
                 android:text="Fill in the missing word to decalre a method called test in PHP: "
+                style="@style/question"
                 />
 
             <LinearLayout
@@ -142,16 +136,16 @@
                 <EditText
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:width="46sp"
+                    android:width="60dp"
                     android:inputType="text"
                     android:id="@+id/q4"
+                    android:textSize="12sp"
                     />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text=" test(){} "
-                    android:textSize="16sp"
                     />
 
             </LinearLayout>
@@ -159,14 +153,6 @@
 
         </LinearLayout>
         <!--    end question-->
-    <!--    begin display score-->
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="display"
-            android:id="@+id/display"
-            />
-    <!--    end display score-->
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -175,6 +161,7 @@
             android:onClick="submitAll"
             android:background="@color/colorPrimary"
             android:textColor="@android:color/white"
+            android:layout_marginTop="20dp"
             />
 
     </LinearLayout>
